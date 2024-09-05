@@ -5,7 +5,7 @@ const NotFoundPage:React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 max-sm:px-6">
       <h1 className="text-6xl font-bold text-gray-800 font-poppins">404</h1>
       <p className="mt-4 text-lg text-gray-600 font-poppins">Oops! The page you're looking for doesn't exist.</p>
 

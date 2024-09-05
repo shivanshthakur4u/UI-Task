@@ -40,17 +40,17 @@ const ExploreChallenges: React.FC<ExploreChallengesProps> = ({
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-    console.log("query:", e.target.value);
+    // console.log("query:", e.target.value);
   };
 
   return (
-    <section className="bg-secondary flex flex-col gap-16 py-[75px] items-center justify-center">
+    <section className="bg-secondary flex flex-col gap-16 py-[75px] items-center justify-center w-full">
       <h2 className="text-[28px] font-poppins font-semibold leading-10 text-center text-white">
         Explore Challenges
       </h2>
       {/* Searchbar and Filter */}
       <div className="flex flex-col gap-4 relative w-full  max-w-[964px]">
-        <div className="flex gap-6">
+        <div className="flex gap-6 flex-col lg:flex-row max-lg:px-6">
           <label className="w-full bg-white flex rounded-xl h-12 items-center px-9 gap-3 lg:min-w-[829px]">
             <img
               src={SearchIcon}
@@ -94,7 +94,7 @@ const ExploreChallenges: React.FC<ExploreChallengesProps> = ({
                 ></div>
 
                 {/* Dropdown Menu */}
-                <div className="absolute right-0 top-[98%] bg-white z-50 px-3 pb-5 rounded-b-[10px] shadow-lg w-72">
+                <div className="absolute sm:right-0 max-lg:left-0 top-[98%] bg-white z-50 px-3 pb-5 rounded-b-[10px] shadow-lg w-72">
                   <div className="bg-[#ECECEC] w-full h-[1px] mt-3" />
                   <div className="mt-4 px-3">
                     <h4 className="text-[#666666] font-inter text-base leading-5">
@@ -150,7 +150,7 @@ const ExploreChallenges: React.FC<ExploreChallengesProps> = ({
         </div>
 
         {/* Selected Filters */}
-        <div className="flex flex-wrap gap-7">
+        <div className="flex flex-wrap gap-7 px-6">
           {selectedFilters.map((filter) => (
             <div
               key={filter}

@@ -29,8 +29,8 @@ export const generateUniqueId = () => {
     }
   };
 
-  export const trimText = (text: string): string => {
+  export const trimText = (text: string, length:number) => {
     const trimmedText = text.trim();
-    return trimmedText.length > 45 ? `${trimmedText.slice(0, 50)}...` : trimmedText;
+    return trimmedText.length > length ? `${trimmedText.slice(0, length)}...` : trimmedText;
   };
   

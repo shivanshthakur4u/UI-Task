@@ -23,10 +23,10 @@ const overViewData = [
 ];
 const OverViewCard: React.FC = () => {
   return (
-    <div className="flex items-center justify-center h-[200px] bg-secondary">
-      <div className="flex gap-[88px]">
+    <div className="flex items-center justify-center lg:h-[200px] h-full bg-secondary max-lg:py-10">
+      <div className="flex flex-col lg:flex-row lg:gap-[88px] gap-6">
         {overViewData.map((item) => (
-          <div className="flex gap-16 items-center" key={item.id}>
+          <div className="flex lg:gap-16 gap-6 flex-col lg:flex-row lg:items-center" key={item.id}>
             <div className="flex gap-6 items-center">
               <div className="flex items-center justify-center rounded-2xl bg-[#F2F4FF] w-14 h-14">
                 <img src={item.icon} alt={`${AiIcon}-icon`} />
@@ -42,8 +42,9 @@ const OverViewCard: React.FC = () => {
               </div>
             </div>
             {item.id !== overViewData.length && (
-              <div className="bg-[#C4C4C4] h-9 w-[0.5px]" />
+              <div className="bg-[#C4C4C4] lg:h-9 h-[0.5px] lg:w-[0.5px] w-full" />
             )}
+            
           </div>
         ))}
       </div>

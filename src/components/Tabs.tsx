@@ -47,11 +47,11 @@ const Tabs: React.FC <TabsProps>= ({challengeId}) => {
     <div className="flex flex-col gap-11">
       <div
         className="flex justify-between bg-white border border-[#DDE6ED] 
-      shadow-md shadow-[#DDE6ED] px-[119px] h-[66px]"
+      shadow-md shadow-[#DDE6ED] sm:px-[119px] px-2 h-[66px]"
       >
         <div className=" flex items-end">
           <div className="pt-4">
-            <ul className="flex">
+            <ul className="flex sm:flex-row flex-col">
               <li
                 className={`cursor-pointer px-6 border-b-[4px] pb-2.5 font-inter text-lg 
             tracking-wider shadow-none rounded-none
@@ -70,14 +70,14 @@ const Tabs: React.FC <TabsProps>= ({challengeId}) => {
         <div className="flex gap-2.5 items-center">
           <button
             className=" border-[1.2px]  bg-[#44924C] rounded-[10px]
-           px-6 h-[37px] text-white text-sm font-medium font-poppins w-[91px] "
+           px-6 h-[37px] text-white text-sm font-medium font-poppins sm:w-[91px] w-20 "
            onClick={()=>navigate(`/challenge-edit/${challengeId}`)}
           >
             Edit
           </button>
           <button
             className=" border-[1.6px]  border-[#DC1414] rounded-[10px]
-           px-6 h-[37px] text-[#DC1414] text-sm font-medium font-poppins w-[91px]"
+           sm:px-6 px-3 h-[37px] text-[#DC1414] text-sm font-medium font-poppins sm:w-[91px] w-20"
            onClick={()=>setOpenConfirmation(true)}
           >
             Delete
@@ -85,7 +85,7 @@ const Tabs: React.FC <TabsProps>= ({challengeId}) => {
         </div>
       </div>
       {/* content */}
-      <p className="pl-[120px] text-[#64607D] font-poppins font-medium text-base tracking-[-2%] max-w-[1100px]">
+      <p className="sm:pl-[120px] pl-6 max-lg:pr-6 text-[#64607D] font-poppins font-medium text-base tracking-[-2%] sm:max-w-[1100px]">
         {renderContent()}
       </p>
     </div>

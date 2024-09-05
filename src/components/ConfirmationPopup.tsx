@@ -23,7 +23,7 @@ const ConfirmationPopup: React.FC<ConfirmationPopupProps> = ({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+      <div className="bg-white p-6 rounded-lg shadow-lg sm:max-w-sm w-full max-sm:mx-6">
         <h3 className="text-lg font-semibold font-poppins">
           Are you sure you want to delete?
         </h3>

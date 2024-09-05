@@ -40,16 +40,16 @@ const Data = [
 
 const WhyAIChallenges: React.FC = () => {
   return (
-    <section className=" py-[90px] px-40 flex flex-col gap-[72px] justify-center items-center">
-      <h3 className="text-center text-[32px] font-poppins font-semibold leading-5">
-        Why Participate in{" "}
+    <section className="sm:py-[90px] py-10 sm:px-40 px-6 flex flex-col gap-[72px] justify-center items-center">
+      <h3 className="text-center text-[32px] font-poppins font-semibold leading-5 flex flex-col lg:flex-row max-sm:gap-4 gap-3">
+       <span> Why Participate in</span>{" "}
         <span className="text-[#44924C]">AI Challenges?</span>
       </h3>
 
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-[35px] gap-y-[37px] ">
         {Data.map((item) => (
           <div
-            className="lg:w-[553px] h-[276px] w-full rounded-[20px] bg-[#F8F9FD] px-8 py-[59px]"
+            className="lg:w-[553px] lg:h-[276px] h-full w-full rounded-[20px] bg-[#F8F9FD] px-8 py-[59px]"
             key={item.id}
           >
             <div className="flex flex-col gap-[5px]">

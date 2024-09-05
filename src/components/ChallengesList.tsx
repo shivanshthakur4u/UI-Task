@@ -7,9 +7,9 @@ interface ChallengesListProps {
 
 const ChallengesList: React.FC<ChallengesListProps> = ({ challenges }) => {
   return (
-    <div className=" py-[75px] flex items-center justify-center bg-primary">
+    <div className="py-[75px] flex items-center justify-center bg-primary">
       {challenges && challenges.length > 0 ? (
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-[50px]">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-14 gap-x-6 lg:gap-y-[50px] gap-y-8">
           {challenges &&
             challenges?.map((challenge: Challenge) => (
               <ChallengeCard key={challenge.id} challenge={challenge} />

@@ -116,7 +116,7 @@ const ChallengeCard: React.FC<ChallengeCardProps> = ({ challenge }) => {
         </div>
         {/* title */}
         <h5 className="text-base font-semibold font-poppins  text-center h-11">
-          {trimText(CapitaliseFirstLetter(challenge.challenge_name).slice(0,45))}
+          {trimText(CapitaliseFirstLetter(challenge.challenge_name), 45)}
         </h5>
         {/* start-in */}
         <div className="flex flex-col gap-1 pt-1">

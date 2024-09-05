@@ -147,14 +147,14 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ isEditMode }) => {
 
   return (
     <div className="flex flex-col gap-8">
-      <div className="bg-[#F8F9FD] py-9 px-[89px] ">
+      <div className="bg-[#F8F9FD] py-9 sm:px-[89px] px-10">
         <h6 className="text-2xl font-bold font-inter leading-7">
           Challenge Details
         </h6>
       </div>
       {/* form */}
       <form
-        className="space-y-[34px] px-[89px] pb-[89px]"
+        className="space-y-[34px] sm:px-[89px] px-10 pb-[89px]"
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col gap-5">
@@ -162,7 +162,7 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ isEditMode }) => {
             Challenge Name
           </label>
           <input
-            className="border border-[#B7B7B7] w-[453px] rounded-md h-10
+            className="border border-[#B7B7B7] sm:w-[453px] w-full rounded-md h-10
              text-[#444444] text-base font-medium font-inter leading-5 focus:outline-none px-4"
             name="challenge_name"
             onChange={handleChange}
@@ -173,13 +173,13 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ isEditMode }) => {
           )}
         </div>
         {/* start date */}
-        <div className="flex flex-col gap-5 w-[453px]">
+        <div className="flex flex-col gap-5 sm:w-[453px] w-full">
           <label className="text-base font-medium leading-5 text-[#333333] font-inter">
             Start Date
           </label>
           <div className="relative">
             <input
-              className="border border-[#B7B7B7] w-[453px] rounded-md h-10 
+              className="border border-[#B7B7B7] sm:w-[453px] w-full rounded-md h-10 
                 text-[#444444] text-base font-medium font-inter leading-5 focus:outline-none px-4"
               type="text"
               value={isEditMode ? format(challengeData.challenge_startDate, "do MMM''yy hh:mm a") : startDateTime}
@@ -208,13 +208,13 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ isEditMode }) => {
           )}
         </div>
         {/* end date */}
-        <div className="flex flex-col gap-5 w-[453px]">
+        <div className="flex flex-col gap-5 sm:w-[453px] w-full">
           <label className="text-base font-medium leading-5 text-[#333333] font-inter">
             End Date
           </label>
           <div className="relative">
             <input
-              className="border border-[#B7B7B7] w-[453px] rounded-md h-10 
+              className="border border-[#B7B7B7] sm:w-[453px] w-full rounded-md h-10 
                 text-[#444444] text-base font-medium font-inter leading-5 focus:outline-none px-4"
               type="text"
            
@@ -251,7 +251,7 @@ const ChallengeForm: React.FC<ChallengeFormProps> = ({ isEditMode }) => {
           <textarea
             className="border border-[#B7B7B7] rounded-md
              text-[#444444] text-base font-medium font-inter resize-none leading-5 focus:outline-none
-              px-5 py-5 h-[252px] w-[817px]"
+              px-5 py-5 h-[252px] lg:w-[817px]"
             name="challenge_description"
             onChange={handleChange}
             value={challengeData.challenge_description}

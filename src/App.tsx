@@ -32,7 +32,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ChallengeProvider>
-    <div className="max-w-screen-2xl container flex-1 mx-auto">
+    <div className="max-w-screen-2xl container flex-1 sm:mx-auto">
       <Navbar />
       <RouterProvider router={router} />
     </div>

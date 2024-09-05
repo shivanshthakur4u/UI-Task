@@ -5,9 +5,9 @@ const HeroSection: React.FC = () => {
   const navigate = useNavigate();
   return (
     <section>
-      <div className="bg-primary pt-[124px] pb-[90px] pl-[143px]">
-        <div className="flex gap-24">
-          <div className="flex gap-[52px] max-w-[705px]">
+      <div className="bg-primary sm:pt-[124px] pt-14 sm:pb-[90px] pb-10 sm:pl-[143px] pl-6 max-sm:pr-6">
+        <div className="flex sm:flex-row flex-col gap-24">
+          <div className="flex sm:gap-[52px] gap-8 max-w-[705px]">
             <div className="bg-[#FFCE5C] h-28 w-2.5" />
             {/* heading */}
             <div className="flex flex-col gap-9">
@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
                 competitions.
               </p>
               <button
-                className="text-primary w-fit bg-white font-poppins font-semibold rounded-[10px] text-lg leading-4 px-[18px] py-[15px]"
+                className="text-primary w-fit  bg-white font-poppins font-semibold rounded-[10px] text-lg leading-4 px-[18px] py-[15px]"
                 color="inherit"
                 onClick={() => navigate("/challenge-add")}
               >
@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
             <img
               src={RocketImage}
               alt="rocket-image"
-              className="w-[242px] h-[294px]"
+              className="w-[242px] h-[294px] lg:block hidden"
             />
           </div>
         </div>

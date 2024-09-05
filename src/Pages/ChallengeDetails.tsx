@@ -7,8 +7,6 @@ import { useParams } from "react-router-dom";
 import { useChallengeContext } from "../context/ChallengeContext";
 import { format } from "date-fns";
 import { CapitaliseFirstLetter, trimText } from "../utils/utils";
-import ConfirmationPopup from "../components/ConfirmationPopup";
-
 
 const ChallengeDetails: React.FC = () => {
   const params = useParams<{ id: string }>();
@@ -28,11 +26,11 @@ const ChallengeDetails: React.FC = () => {
 
     switch (status) {
       case "Upcoming":
-        return `Starts on ${startDateFormatted} (India Standard Time)`;
+        return `Starts on ${startDateFormatted}`;
       case "Active":
-        return `Ongoing - until ${endDateFormatted} (India Standard Time)`;
+        return `Ongoing - until ${endDateFormatted}`;
       case "Past":
-        return `Ended on ${endDateFormatted} (India Standard Time)`;
+        return `Ended on ${endDateFormatted}`;
       default:
         return "";
     }
@@ -40,19 +38,19 @@ const ChallengeDetails: React.FC = () => {
 
   return (
     <>
-      <div className="bg-primary py-24 px-32 flex flex-col gap-6">
+      <div className="bg-primary sm:py-24 py-10 sm:px-32 px-8 flex flex-col gap-6">
         {/* challenge time details */}
         <div className="py-2.5 bg-[#FFCE5C] rounded-md px-[22px] flex gap-2.5 items-center w-fit">
           <img src={ClockIcon} alt="clock-icon" />
-          <p className="text-sm font-semibold font-inter leading-3">
-            {challengeData && formatChallengeDate()}
+          <p className="text-sm font-semibold font-inter leading-3 flex gap-1">
+            {challengeData && formatChallengeDate()} <span className="sm:block hidden">(India Standard Time)</span>
           </p>
         </div>
         {/* challenge title */}
         <div className=" flex flex-col gap-7">
           <h4 className="text-[40px] font-semibold font-poppins leading-[48px] text-white">
             {challengeData &&
-              trimText(CapitaliseFirstLetter(challengeData?.challenge_name))}
+              trimText(CapitaliseFirstLetter(challengeData?.challenge_name), challengeData.challenge_name.length)}
           </h4>
           <p className="text-lg font-medium text-[#F8F9FD] font-inter leading-6">
             {challengeData && challengeData.challenge_description}
